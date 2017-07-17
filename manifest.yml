@@ -1,0 +1,13 @@
+---
+applications:
+- name: dcaron-boot-demo
+  memory: 1G
+  instances: 1
+#  random-route: true
+  path: ./target/boot-demo.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  services:
+#    - fortune-db
+#    - my-config-server
+    - my-circuit-breaker
+    - my-service-registry
